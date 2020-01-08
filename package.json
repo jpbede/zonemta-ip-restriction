@@ -1,10 +1,9 @@
 {
     "name": "zonemta-ip-restriction",
-    "private": true,
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "ZoneMTA IP Restriction Plugin",
     "main": "index.js",
     "author": "Jan-Philipp Benecke",
     "license": "EUPL-1.1+",
-    "homepage": "https://bnck.me"
+    "homepage": "https://github.com/jpbede/zonemta-ip-restriction"
 }
