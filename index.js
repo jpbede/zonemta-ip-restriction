@@ -12,7 +12,7 @@ module.exports.init = function(app, done) {
 
         if (!app.config.allowedips.includes(session.remoteAddress)) {
             let err = new Error('IP ' + session.remoteAddress +  ' not permitted to send!');
-            err.responseCode = 541;
+            err.responseCode = 530;
             return next(err);
         }
 
