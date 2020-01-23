@@ -5,5 +5,8 @@
     "main": "index.js",
     "author": "Jan-Philipp Benecke",
     "license": "EUPL-1.1+",
-    "homepage": "https://github.com/jpbede/zonemta-ip-restriction"
+    "homepage": "https://github.com/jpbede/zonemta-ip-restriction",
+    "dependencies": {
+        "request": "^2.88.0"
+    }
 }
