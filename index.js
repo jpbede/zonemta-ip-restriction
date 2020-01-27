@@ -30,6 +30,11 @@ module.exports.init = function(app, done) {
                     return next(reject(session));
                 }
 
+                if (httpResponse.statusCode != 200) {
+                    // none 200 status means reject, so reject connection
+                    return next(reject(session));
+                }
+
                 // Response is a 200 so IP seems to be legit
                 return next();
             });
@@ -37,6 +42,7 @@ module.exports.init = function(app, done) {
             if (!allowedIPs.includes(session.remoteAddress)) {
                 return next(reject(session));
             }
+
             // IP seems to be legit
             return next();
         } else {
