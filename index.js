@@ -14,7 +14,7 @@ module.exports.init = function(app, done) {
     app.addHook('smtp:connect', (session, next) => {
         let allowedIPs = app.config.allowedips;
 
-        if (!app.config.interfaces.includes(session.interface)) {
+        if (!app.config.interfaces.includes(session.interface) || !app.config.interfaces.includes("*")) {
             // not an interface we care about
             next();
         }
